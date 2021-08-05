@@ -32,14 +32,6 @@ const Cards = (props) => {
 
   useEffect(() => {
     randomImageList();
-    document.querySelectorAll('.card').forEach((card) => {
-      card.addEventListener('click', randomImageList);
-    });
-    return () => {
-      document.querySelectorAll('.card').forEach((card) => {
-        card.removeEventListener('click', randomImageList);
-      });
-    };
   }, []);
 
   return (

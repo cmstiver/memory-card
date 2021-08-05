@@ -1,15 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 const Scoreboard = (props) => (
   <div id="scoreboard">
-    <div>
-      Current Score:
-      {props.currentScore}
-    </div>
-    <div>
-      High Score:
-      {props.maxScore}
-    </div>
+    <div id="current">{`Current Score: ${props.maxScore}`}</div>
+    <div id="high">{`Highscore: ${props.maxScore}`}</div>
   </div>
 );
 
