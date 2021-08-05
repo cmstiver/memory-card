@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import Cards from './components/Card';
+import React from 'react';
+import Game from './components/Game';
 
 const App = () => (
-  <div>
-    <Cards />
-  </div>
+  <>
+    <Game />
+  </>
 );
 
 export default App;

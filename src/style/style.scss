@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+}
+#game {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+#cards-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 25px;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.card-image {
+  width: 90%;
+  border: black 3px solid;
+  border-radius: 5px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+.card {
+  position: relative;
+  width: 32vw;
+  height: 32vw;
+  background-color: aquamarine;
+  border-radius: 5px;
+  border: black 2px solid;
+  margin: 1px;
+  cursor: pointer;
+}
+@media only screen and (min-width: 800px) {
+  .card {
+    width: 20vw;
+    height: 20vw;
+  }
+}
