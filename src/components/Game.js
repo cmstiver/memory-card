@@ -8,21 +8,22 @@ const Game = () => {
   const [currentScore, setCurrentScore] = useState(0);
   const [maxScore, setMaxScore] = useState(0);
 
+  useEffect(() => {
+    if (currentScore > maxScore) {
+      setMaxScore(currentScore);
+    }
+  }, [currentScore]);
+
   const updatePlayerChoices = (choice) => {
     const choiceNum = Number(choice);
     setPlayerChoices((prevPlayerChoices) => {
-      console.log(prevPlayerChoices);
       if (prevPlayerChoices.includes(choiceNum)) {
-        console.log('set the score to 0');
         setCurrentScore(0);
         setPlayerChoices([]);
         return false;
       }
       setCurrentScore((prevScore) => Number(prevScore) + 1);
 
-      if (maxScore < currentScore) {
-        setMaxScore(currentScore);
-      }
       return [...prevPlayerChoices, choiceNum];
     });
   };
